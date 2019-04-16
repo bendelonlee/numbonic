@@ -1,7 +1,7 @@
 class PasswordFacade
   attr_reader :number, :fact, :password
-  def initialize(int)
-    @number = int
+  def initialize(int = nil)
+    @number = int || random_number_generator.distributed_random
     @fact = numbers_service.get_fact(number)
     @password = password_generator.make_password(number, fact)
   end

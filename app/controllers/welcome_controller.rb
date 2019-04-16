@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @password = PasswordFacade.new(7)
+    @password = PasswordFacade.new
   end
 end
