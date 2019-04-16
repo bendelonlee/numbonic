@@ -6,6 +6,7 @@ describe PasswordGenerator do
     password = generator.make_password(48, "48 is the number of Ptolemaic constellations.")
     expect(password).to include('4')
     expect(password).to include('8')
-    expect(password.include?("Ptolemaic") || password.include?("constellations")).to eq(true)
+    expect(password.include?("ptolemaic") || password.include?("constellations")).to eq(true)
+    expect(password.include?('.')).to eq(false)
   end
 end
