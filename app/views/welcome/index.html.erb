@@ -1,6 +1,12 @@
-<h1>Numonic</h1>
-<h3>A password generator for the numerically interested.</h3>
-
-<p>Your memorable number: <%= @password.number %></p>
-<p>Your memorable fact: <%= @password.fact %></p>
-<p>Your memorable password: <%= @password.password %></p>
+<div class="flex-container">
+  <div class="card">
+    <h1>Numonic</h1>
+    <h3>A password generator for the numerically interested.</h3>
+    <br>
+    <p>Number: <%= @password.number %></p>
+    <p>Fact: <%= @password.fact %></p>
+    <p>Your memorable password:
+      <%= @password.password %>
+    </p>
+  </div>
+</div>
