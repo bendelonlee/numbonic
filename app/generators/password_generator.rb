@@ -8,7 +8,9 @@ class PasswordGenerator
       COMMON_WORDS.include?(word)
     end
     ensure_key_words
-    [@key_words.sample, number].shuffle.join
+    random_symbol = %w(! @ # $ % ^ & * ( ) _ + = : " ' ; , < > . ? ~).sample
+
+    [@key_words.sample, number, random_symbol].shuffle.join
   end
 
   def ensure_key_words
